@@ -1,15 +1,15 @@
 # YandexMusicLinux
 Данный скрипт позволяет собрать версию Яндекс Музыки для Linux используя версию для Windows
 
+## Использование
+`wget -O - https://raw.githubusercontent.com/rineu/YandexMusicLinux/main/build.sh | bash`
+
 ### Что не работает
 - Произвольная иконка не применяется
 - При закрытии Яндекс Музыки процесс не убивается
 - Название приложения не применяется
 - Поддержка дистрибутивов кроме Ubuntu
 - Копирование AppImage и Snap из dist
-
-## Использование
-`wget -O - https://raw.githubusercontent.com/rineu/YandexMusicLinux/main/build.sh | bash`
 
 ## Как это работает
 Так как Яндекс Музыка не использует модули привязанные к определённой системе, можно использовать тот же `app.asar`, что и для Windows.
