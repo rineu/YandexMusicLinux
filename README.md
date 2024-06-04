@@ -5,6 +5,8 @@
 - Произвольная иконка не применяется
 - При закрытии Яндекс Музыки процесс не убивается
 - Название приложения не применяется
+- Поддержка дистрибутивов кроме Ubuntu
+- Копирование AppImage и Snap из dist
 
 ## Использование
 `wget -O - https://raw.githubusercontent.com/rineu/YandexMusicLinux/main/build.sh | bash`
