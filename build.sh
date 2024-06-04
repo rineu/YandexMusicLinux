@@ -41,7 +41,6 @@ grep -rlE '.WINDOWS:[a-zA-Z]{1}="[a-zA-Z0-9]{1,}"' . | xargs sed -i 's/WINDOWS/L
 # not necessary but i will still append a platform there :>
 grep -rl 'Platform\[\"WINDOWS\"\] = \"win32\"' . | xargs -I {} sed -i '/Platform\[\"WINDOWS\"\] = \"win32\"/a Platform["LINUX"] = "linux";' {}
 # fixing the build configuration
-#sed -i '$ s/}/,\n"build": {\n  "appId": "ru.yandex.desktop.music",\n  "files": [\n    "build\/**\/*",\n    "main\/**\/*",\n    "node_modules\/**\/*",\n    "package.json"\n  ]\n}\n}/' package.json
 sed -i '$ s/}/,\n"build": {\n  "appId": "ru.yandex.desktop.music",\n  "files": [\n    "build\/**\/*",\n    "main\/**\/*",\n    "node_modules\/**\/*",\n    "package.json"\n  ],\n  "directories": {"buildResources":"assets"},\n  "linux": {"icon":"icon.png", "category": "Audio"}\n}\n}/' package.json
 echo "Files are patched!"
 
